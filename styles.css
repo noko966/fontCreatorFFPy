@@ -1,0 +1,358 @@
+
+@font-face {
+  font-family: "esportIconsFont";
+  src: url("esportIcons.eot");
+  src: url("esportIcons.eot?#iefix") format("embedded-opentype"),
+    url("esportIcons.woff2") format("woff2"),
+    url("esportIcons.woff") format("woff"),
+    url("esportIcons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ico_font-L {
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  font-size: 36px !important;
+}
+
+[class^="ico_font-"],
+[class*=" ico_font-"] {
+  font-family: "esportIconsFont";
+  display: inline-block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e051";
+  direction: ltr !important;
+  background: #41487d;
+  color: #fff;
+  border-radius: 8px;
+}
+
+    .ico_font-AllGames::before {
+        content: "\E000";
+    }
+    
+    .ico_font-Arrows::before {
+        content: "\E001";
+    }
+    
+    .ico_font-ArrowSquareIn::before {
+        content: "\E002";
+    }
+    
+    .ico_font-ArrowSquareOut::before {
+        content: "\E003";
+    }
+    
+    .ico_font-Bell::before {
+        content: "\E004";
+    }
+    
+    .ico_font-BetSlip::before {
+        content: "\E005";
+    }
+    
+    .ico_font-Calculator::before {
+        content: "\E006";
+    }
+    
+    .ico_font-Calendar::before {
+        content: "\E007";
+    }
+    
+    .ico_font-CalendarBlank::before {
+        content: "\E008";
+    }
+    
+    .ico_font-CaretDoubleDown::before {
+        content: "\E009";
+    }
+    
+    .ico_font-CaretDoubleUp::before {
+        content: "\E00A";
+    }
+    
+    .ico_font-CaretDown::before {
+        content: "\E00B";
+    }
+    
+    .ico_font-CaretLeft::before {
+        content: "\E00C";
+    }
+    
+    .ico_font-CaretRight::before {
+        content: "\E00D";
+    }
+    
+    .ico_font-CaretUp::before {
+        content: "\E00E";
+    }
+    
+    .ico_font-ChartBar::before {
+        content: "\E00F";
+    }
+    
+    .ico_font-Check::before {
+        content: "\E010";
+    }
+    
+    .ico_font-CheckCircle::before {
+        content: "\E011";
+    }
+    
+    .ico_font-Checks::before {
+        content: "\E012";
+    }
+    
+    .ico_font-CheckSquare::before {
+        content: "\E013";
+    }
+    
+    .ico_font-CheckSquareEmpty::before {
+        content: "\E014";
+    }
+    
+    .ico_font-Clock::before {
+        content: "\E015";
+    }
+    
+    .ico_font-ClockClockwise::before {
+        content: "\E016";
+    }
+    
+    .ico_font-ClockCounterClockwise::before {
+        content: "\E017";
+    }
+    
+    .ico_font-Close::before {
+        content: "\E018";
+    }
+    
+    .ico_font-Coin::before {
+        content: "\E019";
+    }
+    
+    .ico_font-Coins::before {
+        content: "\E01A";
+    }
+    
+    .ico_font-CoinVertical::before {
+        content: "\E01B";
+    }
+    
+    .ico_font-CopySimple::before {
+        content: "\E01C";
+    }
+    
+    .ico_font-CurrencyCircleDollar::before {
+        content: "\E01D";
+    }
+    
+    .ico_font-CurrencyDollar::before {
+        content: "\E01E";
+    }
+    
+    .ico_font-Desktop::before {
+        content: "\E01F";
+    }
+    
+    .ico_font-DotsThreeRectangular::before {
+        content: "\E020";
+    }
+    
+    .ico_font-DotsThreeVertical::before {
+        content: "\E021";
+    }
+    
+    .ico_font-EnvelopeSimple::before {
+        content: "\E022";
+    }
+    
+    .ico_font-EnvelopeSimpleOpen::before {
+        content: "\E023";
+    }
+    
+    .ico_font-EyeClosed::before {
+        content: "\E024";
+    }
+    
+    .ico_font-Eye::before {
+        content: "\E025";
+    }
+    
+    .ico_font-FavoriteFill::before {
+        content: "\E026";
+    }
+    
+    .ico_font-Favorite::before {
+        content: "\E027";
+    }
+    
+    .ico_font-Flag::before {
+        content: "\E028";
+    }
+    
+    .ico_font-Funnel::before {
+        content: "\E029";
+    }
+    
+    .ico_font-FunnelSimple::before {
+        content: "\E02A";
+    }
+    
+    .ico_font-Gift::before {
+        content: "\E02B";
+    }
+    
+    .ico_font-Globe::before {
+        content: "\E02C";
+    }
+    
+    .ico_font-Help::before {
+        content: "\E02D";
+    }
+    
+    .ico_font-House::before {
+        content: "\E02E";
+    }
+    
+    .ico_font-Info::before {
+        content: "\E02F";
+    }
+    
+    .ico_font-Link::before {
+        content: "\E030";
+    }
+    
+    .ico_font-List::before {
+        content: "\E031";
+    }
+    
+    .ico_font-ListBullets::before {
+        content: "\E032";
+    }
+    
+    .ico_font-ListChecks::before {
+        content: "\E033";
+    }
+    
+    .ico_font-Lock::before {
+        content: "\E034";
+    }
+    
+    .ico_font-LockOpen::before {
+        content: "\E035";
+    }
+    
+    .ico_font-MagnifyingGlass::before {
+        content: "\E036";
+    }
+    
+    .ico_font-PencilSimpleLine::before {
+        content: "\E037";
+    }
+    
+    .ico_font-Percent::before {
+        content: "\E038";
+    }
+    
+    .ico_font-Printer::before {
+        content: "\E039";
+    }
+    
+    .ico_font-Promotions::before {
+        content: "\E03A";
+    }
+    
+    .ico_font-PushPinSlash::before {
+        content: "\E03B";
+    }
+    
+    .ico_font-PushPin::before {
+        content: "\E03C";
+    }
+    
+    .ico_font-Rows::before {
+        content: "\E03D";
+    }
+    
+    .ico_font-Settings::before {
+        content: "\E03E";
+    }
+    
+    .ico_font-ShareNetwork::before {
+        content: "\E03F";
+    }
+    
+    .ico_font-ShieldCheck::before {
+        content: "\E040";
+    }
+    
+    .ico_font-SignIn::before {
+        content: "\E041";
+    }
+    
+    .ico_font-SignOut::before {
+        content: "\E042";
+    }
+    
+    .ico_font-SlideLeft::before {
+        content: "\E043";
+    }
+    
+    .ico_font-SlideRight::before {
+        content: "\E044";
+    }
+    
+    .ico_font-Sliders::before {
+        content: "\E045";
+    }
+    
+    .ico_font-SlidersHorizontal::before {
+        content: "\E046";
+    }
+    
+    .ico_font-SquaresFour::before {
+        content: "\E047";
+    }
+    
+    .ico_font-Timer::before {
+        content: "\E048";
+    }
+    
+    .ico_font-Trash::before {
+        content: "\E049";
+    }
+    
+    .ico_font-User::before {
+        content: "\E04A";
+    }
+    
+    .ico_font-UserList::before {
+        content: "\E04B";
+    }
+    
+    .ico_font-Warning::before {
+        content: "\E04C";
+    }
+    
+    .ico_font-WarningCircle::before {
+        content: "\E04D";
+    }
+    
