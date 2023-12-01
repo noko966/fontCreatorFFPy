@@ -2,12 +2,19 @@ import fontforge
 import os
 import re
 
-folder_path = 'icons'
-font = fontforge.open('aa.ttf')
+# Config for Paths and Names
+source_folder = "src"
+icons_folder = "icons"
+source_blank_font = "source_empty_font.ttf"
 
-files = os.listdir(folder_path)
+src_icons_path = os.path.join(source_folder, icons_folder)
+font = fontforge.open(os.path.join(source_folder, source_blank_font))
+css_class_prefix = "es_glyph_"
+font_file_name = "eSportsIcons"
+font_family_name = "{}Font".format(font_file_name)
 
-# Remove the '-01.svg' suffix using regular expression
+files = os.listdir(src_icons_path)
+
 filesArray = []
 
 html_content = """
@@ -18,14 +25,24 @@ html_content = """
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+  .icons_container {
+        display: flex;
+      flex-direction: row;
+      gap: 8px;
+      flex-wrap: wrap;
+  }
+  </style>
   </head>
   <body>
+    <div class="icons_container">
+  
 """
 
 # Generate CSS content
-css_content = """
-@font-face {
-  font-family: "esportIconsFont";
+css_content = f"""
+@font-face {{
+  font-family: "{font_family_name}";
   src: url("esportIcons.eot");
   src: url("esportIcons.eot?#iefix") format("embedded-opentype"),
     url("esportIcons.woff2") format("woff2"),
@@ -34,18 +51,18 @@ css_content = """
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+}}
 
-.ico_font-L {
+.ico_font-L {{
   width: 36px !important;
   height: 36px !important;
   line-height: 36px !important;
   font-size: 36px !important;
-}
+}}
 
-[class^="ico_font-"],
-[class*=" ico_font-"] {
-  font-family: "esportIconsFont";
+[class^="{css_class_prefix}"],
+[class*=" {css_class_prefix}"] {{
+  font-family: "{font_family_name}";
   display: inline-block;
   flex-shrink: 0;
   width: 24px;
@@ -62,12 +79,9 @@ css_content = """
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\\e051";
+  content: "\\E0000";
   direction: ltr !important;
-  background: #41487d;
-  color: #fff;
-  border-radius: 8px;
-}
+}}
 """
 
 for file in files:
@@ -76,45 +90,46 @@ for file in files:
 print(len(filesArray))
 
 for idx, files in enumerate(filesArray):
-    uv = 'uniE006'
+    uv = "uniE006"
     hexToInt = int("E000", 16) + idx
     intToHex = hex(hexToInt)[2:].upper()
     # print(hexToInt, intToHex)
-    glyph = font.createMappedChar('uni' + intToHex)
-    glyph.importOutlines('icons/' + files)
+    glyph = font.createMappedChar("uni" + intToHex)
+    glyph.importOutlines(os.path.join(src_icons_path, files))
 
-    result = re.sub(r'-\d+\.svg$', '', files)
-    result = result.replace(" ", "")
+    result = files.replace(" ", "")
+    result = result.replace(".svg", "")
+    result = result.replace("a__", "")
 
     html_content += f"""
-    <i class="ico_font-{result} ico_font-L"></i>
+    <i class="{css_class_prefix}{result}"></i>
     """
 
     css_content += f"""
-    .ico_font-{result}::before {{
+    .{css_class_prefix}{result}::before {{
         content: "\\{intToHex}";
     }}
     """
 
 
-html_content += f"""
+html_content += """
       </body>
 </html>
     """
 
-font.save('output-font.sfd')
+# font.save("dist/output-font.sfd")
 
-font.generate("esportIcons.ttf")
-font.generate("esportIcons.eot")
-font.generate("esportIcons.woff")
-font.generate("esportIcons.woff2")
+font.generate("dist/esportIcons.ttf")
+font.generate("dist/esportIcons.eot")
+font.generate("dist/esportIcons.woff")
+font.generate("dist/esportIcons.woff2")
 
 # Save HTML file
-html_file_path = "index.html"
+html_file_path = "dist/index.html"
 with open(html_file_path, "w") as html_file:
     html_file.write(html_content)
 
 # Save CSS file
-css_file_path = "styles.css"
+css_file_path = "dist/styles.css"
 with open(css_file_path, "w") as css_file:
     css_file.write(css_content)
