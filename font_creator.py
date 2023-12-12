@@ -77,8 +77,7 @@ html_content = f"""
     }}
     
     .icons_container .{css_class_additional} {{
-      border-radius: 4px;
-      border: 1px solid var(--dominantBg2);
+      border-radius: 2px;
       background: var(--dominantBg);
       color: var(--dominantTxt);
       cursor: pointer;
@@ -178,13 +177,14 @@ for idx, files in enumerate(filesArray):
     result = result.replace(".svg", "")
     result = process_string(result)
 
-    html_content = (
-        html_content[:icons_from_index]
-        + f"""
-    <i class="{css_class_prefix}{result} {css_class_additional}" title="{result} | {"uni" + intToHex}"></i>
-    """
-        + html_content[icons_from_index:]
-    )
+    for key, value in glyph_sizes.items():
+        html_content = (
+            html_content[:icons_from_index]
+            + f"""
+      <i class="{css_class_prefix}{result} {css_class_additional} {key}" title="{result} | {"uni" + intToHex}"></i>
+      """
+            + html_content[icons_from_index:]
+        )
 
     css_content += f"""
     .{css_class_prefix}{result}::before {{
