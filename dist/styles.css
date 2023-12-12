@@ -11,22 +11,42 @@
   font-display: swap;
 }
 
-.ico_font-L {
-  width: 36px !important;
-  height: 36px !important;
-  line-height: 36px !important;
-  font-size: 36px !important;
+:root{
+  --bodyBg: #121212;
+  --bodyBg2: #151A1E;
+  --bodyTxt: #ccc;
+  --dominantBg: #0b293d;
+  --dominantBg2: #14496d;
+  --dominantTxt: #fefefe;
+  --accentBg: #00b6ff;
+  --accentBg2: #33454d;
+  --accentTxt: rgba(0, 0, 0, 0.97);
+  --icoSize: 16px;
 }
+
+.es_glyph_large {
+  width: var(--icoSize) !important;
+  height: var(--icoSize)  !important;
+  line-height: var(--icoSize)  !important;
+  font-size: calc(var(--icoSize)) !important;
+  background: var(--dominantBg);
+  color: var(--dominantTxt);
+  border-radius: 4px;
+  transition: all 0.3s;
+  border: 1px solid var(--dominantBg2);
+  cursor: pointer;
+}
+
 
 [class^="es_glyph_"],
 [class*=" es_glyph_"] {
   font-family: "eSportsIconsFont";
   display: inline-block;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  font-size: 24px;
+  width: var(--icoSize);
+  height: var(--icoSize);
+  line-height: var(--icoSize);
+  font-size: var(--icoSize);
   text-align: center;
   vertical-align: middle;
   font-weight: normal;
@@ -41,115 +61,115 @@
   direction: ltr !important;
 }
 
-    .es_glyph_arrows::before {
+    .es_glyph_all_games::before {
         content: "\E000";
     }
     
-    .es_glyph_arrow_square_in::before {
+    .es_glyph_arrows::before {
         content: "\E001";
     }
     
-    .es_glyph_arrow_square_out::before {
+    .es_glyph_arrow_square_in::before {
         content: "\E002";
     }
     
-    .es_glyph_bell::before {
+    .es_glyph_arrow_square_out::before {
         content: "\E003";
     }
     
-    .es_glyph_betslip::before {
+    .es_glyph_bell_active::before {
         content: "\E004";
     }
     
-    .es_glyph_calculator::before {
+    .es_glyph_bell::before {
         content: "\E005";
     }
     
-    .es_glyph_calendar::before {
+    .es_glyph_betslip::before {
         content: "\E006";
     }
     
-    .es_glyph_calendar_blank::before {
+    .es_glyph_calculator::before {
         content: "\E007";
     }
     
-    .es_glyph_caret_double_down::before {
+    .es_glyph_calendar::before {
         content: "\E008";
     }
     
-    .es_glyph_caret_double_up::before {
+    .es_glyph_calendar_blank::before {
         content: "\E009";
     }
     
-    .es_glyph_caret_down::before {
+    .es_glyph_caret_double_down::before {
         content: "\E00A";
     }
     
-    .es_glyph_caret_left::before {
+    .es_glyph_caret_double_up::before {
         content: "\E00B";
     }
     
-    .es_glyph_caret_right::before {
+    .es_glyph_caret_down::before {
         content: "\E00C";
     }
     
-    .es_glyph_caret_up::before {
+    .es_glyph_caret_left::before {
         content: "\E00D";
     }
     
-    .es_glyph_chart_bar::before {
+    .es_glyph_caret_right::before {
         content: "\E00E";
     }
     
-    .es_glyph_check::before {
+    .es_glyph_caret_up::before {
         content: "\E00F";
     }
     
-    .es_glyph_checks::before {
+    .es_glyph_chart_bar::before {
         content: "\E010";
     }
     
-    .es_glyph_check_circle::before {
+    .es_glyph_check::before {
         content: "\E011";
     }
     
-    .es_glyph_check_square::before {
+    .es_glyph_check_circle::before {
         content: "\E012";
     }
     
-    .es_glyph_check_square_empty::before {
+    .es_glyph_checks::before {
         content: "\E013";
     }
     
-    .es_glyph_circle_dollar::before {
+    .es_glyph_check_square::before {
         content: "\E014";
     }
     
-    .es_glyph_clock::before {
+    .es_glyph_check_square_empty::before {
         content: "\E015";
     }
     
-    .es_glyph_clock_ccw::before {
+    .es_glyph_clock::before {
         content: "\E016";
     }
     
-    .es_glyph_clock_cw::before {
+    .es_glyph_clock_clockwise::before {
         content: "\E017";
     }
     
-    .es_glyph_close::before {
+    .es_glyph_clock_counter_clockwise::before {
         content: "\E018";
     }
     
-    .es_glyph_coin::before {
+    .es_glyph_close::before {
         content: "\E019";
     }
     
-    .es_glyph_coins::before {
+    .es_glyph_coin::before {
         content: "\E01A";
     }
     
-    .es_glyph_coin_simple::before {
+    .es_glyph_coins::before {
         content: "\E01B";
     }
     
@@ -157,199 +177,203 @@
         content: "\E01C";
     }
     
-    .es_glyph_desctop::before {
+    .es_glyph_copy_simple::before {
         content: "\E01D";
     }
     
-    .es_glyph_dollar::before {
+    .es_glyph_currency_circle_dollar::before {
         content: "\E01E";
     }
     
-    .es_glyph_dots_three_square::before {
+    .es_glyph_currency_dollar::before {
         content: "\E01F";
     }
     
-    .es_glyph_dots_three_vertical::before {
+    .es_glyph_desktop::before {
         content: "\E020";
     }
     
-    .es_glyph_envelope::before {
+    .es_glyph_dots_three_rectangular::before {
         content: "\E021";
     }
     
-    .es_glyph_envelope_open::before {
+    .es_glyph_dots_three_vertical::before {
         content: "\E022";
     }
     
-    .es_glyph_eye::before {
+    .es_glyph_envelope_simple::before {
         content: "\E023";
     }
     
-    .es_glyph_eye_closed::before {
+    .es_glyph_envelope_simple_open::before {
         content: "\E024";
     }
     
-    .es_glyph_favorite::before {
+    .es_glyph_eye::before {
         content: "\E025";
     }
     
-    .es_glyph_favorite_filled::before {
+    .es_glyph_eye_closed::before {
         content: "\E026";
     }
     
-    .es_glyph_flag::before {
+    .es_glyph_favorite_fill::before {
         content: "\E027";
     }
     
-    .es_glyph_funnel::before {
+    .es_glyph_favorite::before {
         content: "\E028";
     }
     
-    .es_glyph_funnel_simple::before {
+    .es_glyph_flag::before {
         content: "\E029";
     }
     
-    .es_glyph_gift::before {
+    .es_glyph_funnel::before {
         content: "\E02A";
     }
     
-    .es_glyph_globe::before {
+    .es_glyph_funnel_simple::before {
         content: "\E02B";
     }
     
-    .es_glyph_help::before {
+    .es_glyph_gift::before {
         content: "\E02C";
     }
     
-    .es_glyph_house::before {
+    .es_glyph_globe::before {
         content: "\E02D";
     }
     
-    .es_glyph_info::before {
+    .es_glyph_help::before {
         content: "\E02E";
     }
     
-    .es_glyph_joystick::before {
+    .es_glyph_house::before {
         content: "\E02F";
     }
     
-    .es_glyph_link::before {
+    .es_glyph_info::before {
         content: "\E030";
     }
     
-    .es_glyph_list::before {
+    .es_glyph_link::before {
         content: "\E031";
     }
     
-    .es_glyph_list_bullets::before {
+    .es_glyph_lis::before {
         content: "\E032";
     }
     
-    .es_glyph_list_checks::before {
+    .es_glyph_list_bullets::before {
         content: "\E033";
     }
     
-    .es_glyph_lock::before {
+    .es_glyph_list_checks::before {
         content: "\E034";
     }
     
-    .es_glyph_lock_open::before {
+    .es_glyph_lock::before {
         content: "\E035";
     }
     
-    .es_glyph_pen_simple::before {
+    .es_glyph_lock_open::before {
         content: "\E036";
     }
     
-    .es_glyph_percent::before {
+    .es_glyph_magnifying_glass::before {
         content: "\E037";
     }
     
-    .es_glyph_printer::before {
+    .es_glyph_pencil_simple_line::before {
         content: "\E038";
     }
     
-    .es_glyph_promotions::before {
+    .es_glyph_percent::before {
         content: "\E039";
     }
     
-    .es_glyph_push_pin::before {
+    .es_glyph_printer::before {
         content: "\E03A";
     }
     
-    .es_glyph_push_pin_slash::before {
+    .es_glyph_promotions::before {
         content: "\E03B";
     }
     
-    .es_glyph_rows::before {
+    .es_glyph_push_pin::before {
         content: "\E03C";
     }
     
-    .es_glyph_search::before {
+    .es_glyph_push_pin_slash::before {
         content: "\E03D";
     }
     
-    .es_glyph_settings::before {
+    .es_glyph_rows::before {
         content: "\E03E";
     }
     
-    .es_glyph_share_network::before {
+    .es_glyph_settings::before {
         content: "\E03F";
     }
     
-    .es_glyph_shield_check::before {
+    .es_glyph_share_network::before {
         content: "\E040";
     }
     
-    .es_glyph_sign_in::before {
+    .es_glyph_shield_check::before {
         content: "\E041";
     }
     
-    .es_glyph_sign_out::before {
+    .es_glyph_sign_in::before {
         content: "\E042";
     }
     
-    .es_glyph_sliders::before {
+    .es_glyph_sign_out::before {
         content: "\E043";
     }
     
-    .es_glyph_sliders_horizontal::before {
+    .es_glyph_slide_left::before {
         content: "\E044";
     }
     
-    .es_glyph_slide_left::before {
+    .es_glyph_slide_right::before {
         content: "\E045";
     }
     
-    .es_glyph_slide_right::before {
+    .es_glyph_sliders::before {
         content: "\E046";
     }
     
-    .es_glyph_square_four::before {
+    .es_glyph_sliders_horizontal::before {
         content: "\E047";
     }
     
-    .es_glyph_timer::before {
+    .es_glyph_squares_four::before {
         content: "\E048";
     }
     
-    .es_glyph_trash::before {
+    .es_glyph_timer::before {
         content: "\E049";
     }
     
-    .es_glyph_user::before {
+    .es_glyph_trash::before {
         content: "\E04A";
     }
     
-    .es_glyph_user_list::before {
+    .es_glyph_user::before {
         content: "\E04B";
     }
     
-    .es_glyph_warning::before {
+    .es_glyph_user_list::before {
         content: "\E04C";
     }
     
-    .es_glyph_warning_circle::before {
+    .es_glyph_warning::before {
         content: "\E04D";
+    }
+    
+    .es_glyph_warning_circle::before {
+        content: "\E04E";
     }
     
