@@ -5,188 +5,222 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="eSportsIcons.css" />
     <style>
-  .icons_container {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          gap: calc(var(--icoSize) * 0.3);
-          flex-wrap: wrap;
-          padding-left: calc(var(--icoSize) * 0.5);
-          padding-right: calc(var(--icoSize) * 0.5);
-          background: var(--bodyBg);
-          border: 1px solid var(--151A1E);
+    *, *:before, *:after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
       }
+      
+    :root{
+    --iconSize: 24px;
+      
+    --bodyBg: #121212;
+    --bodyBg2: #151A1E;
+    --bodyTxt: #ccc;
+    --dominantBg: #0b293d;
+    --dominantBg2: #14496d;
+    --dominantTxt: #fefefe;
+    --accentBg: #00b6ff;
+    --accentBg2: #33454d;
+    --accentTxt: rgba(0, 0, 0, 0.97);
+    }
+    html {
+      background: var(--bodyBg);
+      color: var(--bodyTxt);
+    }
+    
+    .icons_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: calc(var(--iconSize) * 0.6);
+      flex-wrap: wrap;
+      padding-left: calc(var(--iconSize) * 0.5);
+      padding-right: calc(var(--iconSize) * 0.5);
+      background: var(--bodyBg);
+      border: 1px solid var(--151A1E);
+      padding: calc(var(--iconSize) * 1.6);
+    }
+    
+    .icons_container .dg_glyph {
+      border-radius: 4px;
+      border: 1px solid var(--dominantBg2);
+      background: var(--dominantBg);
+      color: var(--dominantTxt);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
 
-  html {
-  background: var(--bodyBg);
-  color: var(--bodyTxt);
-}
   </style>
   </head>
   <body>
     <div class="icons_container">
-  
-
-    <i class="es_glyph_all_games es_glyph_large"></i>
+    <!-- icons -->
+    <i class="es_glyph_warning_circle dg_glyph" title="warning_circle | uniE04E"></i>
     
-    <i class="es_glyph_arrows es_glyph_large"></i>
+    <i class="es_glyph_warning dg_glyph" title="warning | uniE04D"></i>
     
-    <i class="es_glyph_arrow_square_in es_glyph_large"></i>
+    <i class="es_glyph_user_list dg_glyph" title="user_list | uniE04C"></i>
     
-    <i class="es_glyph_arrow_square_out es_glyph_large"></i>
+    <i class="es_glyph_user dg_glyph" title="user | uniE04B"></i>
     
-    <i class="es_glyph_bell_active es_glyph_large"></i>
+    <i class="es_glyph_trash dg_glyph" title="trash | uniE04A"></i>
     
-    <i class="es_glyph_bell es_glyph_large"></i>
+    <i class="es_glyph_timer dg_glyph" title="timer | uniE049"></i>
     
-    <i class="es_glyph_betslip es_glyph_large"></i>
+    <i class="es_glyph_squares_four dg_glyph" title="squares_four | uniE048"></i>
     
-    <i class="es_glyph_calculator es_glyph_large"></i>
+    <i class="es_glyph_sliders_horizontal dg_glyph" title="sliders_horizontal | uniE047"></i>
     
-    <i class="es_glyph_calendar es_glyph_large"></i>
+    <i class="es_glyph_sliders dg_glyph" title="sliders | uniE046"></i>
     
-    <i class="es_glyph_calendar_blank es_glyph_large"></i>
+    <i class="es_glyph_slide_right dg_glyph" title="slide_right | uniE045"></i>
     
-    <i class="es_glyph_caret_double_down es_glyph_large"></i>
+    <i class="es_glyph_slide_left dg_glyph" title="slide_left | uniE044"></i>
     
-    <i class="es_glyph_caret_double_up es_glyph_large"></i>
+    <i class="es_glyph_sign_out dg_glyph" title="sign_out | uniE043"></i>
     
-    <i class="es_glyph_caret_down es_glyph_large"></i>
+    <i class="es_glyph_sign_in dg_glyph" title="sign_in | uniE042"></i>
     
-    <i class="es_glyph_caret_left es_glyph_large"></i>
+    <i class="es_glyph_shield_check dg_glyph" title="shield_check | uniE041"></i>
     
-    <i class="es_glyph_caret_right es_glyph_large"></i>
+    <i class="es_glyph_share_network dg_glyph" title="share_network | uniE040"></i>
     
-    <i class="es_glyph_caret_up es_glyph_large"></i>
+    <i class="es_glyph_settings dg_glyph" title="settings | uniE03F"></i>
     
-    <i class="es_glyph_chart_bar es_glyph_large"></i>
+    <i class="es_glyph_rows dg_glyph" title="rows | uniE03E"></i>
     
-    <i class="es_glyph_check es_glyph_large"></i>
+    <i class="es_glyph_push_pin_slash dg_glyph" title="push_pin_slash | uniE03D"></i>
     
-    <i class="es_glyph_check_circle es_glyph_large"></i>
+    <i class="es_glyph_push_pin dg_glyph" title="push_pin | uniE03C"></i>
     
-    <i class="es_glyph_checks es_glyph_large"></i>
+    <i class="es_glyph_promotions dg_glyph" title="promotions | uniE03B"></i>
     
-    <i class="es_glyph_check_square es_glyph_large"></i>
+    <i class="es_glyph_printer dg_glyph" title="printer | uniE03A"></i>
     
-    <i class="es_glyph_check_square_empty es_glyph_large"></i>
+    <i class="es_glyph_percent dg_glyph" title="percent | uniE039"></i>
     
-    <i class="es_glyph_clock es_glyph_large"></i>
+    <i class="es_glyph_pencil_simple_line dg_glyph" title="pencil_simple_line | uniE038"></i>
     
-    <i class="es_glyph_clock_clockwise es_glyph_large"></i>
+    <i class="es_glyph_magnifying_glass dg_glyph" title="magnifying_glass | uniE037"></i>
     
-    <i class="es_glyph_clock_counter_clockwise es_glyph_large"></i>
+    <i class="es_glyph_lock_open dg_glyph" title="lock_open | uniE036"></i>
     
-    <i class="es_glyph_close es_glyph_large"></i>
+    <i class="es_glyph_lock dg_glyph" title="lock | uniE035"></i>
     
-    <i class="es_glyph_coin es_glyph_large"></i>
+    <i class="es_glyph_list_checks dg_glyph" title="list_checks | uniE034"></i>
     
-    <i class="es_glyph_coins es_glyph_large"></i>
+    <i class="es_glyph_list_bullets dg_glyph" title="list_bullets | uniE033"></i>
     
-    <i class="es_glyph_coin_vertical es_glyph_large"></i>
+    <i class="es_glyph_lis dg_glyph" title="lis | uniE032"></i>
     
-    <i class="es_glyph_copy_simple es_glyph_large"></i>
+    <i class="es_glyph_link dg_glyph" title="link | uniE031"></i>
     
-    <i class="es_glyph_currency_circle_dollar es_glyph_large"></i>
+    <i class="es_glyph_info dg_glyph" title="info | uniE030"></i>
     
-    <i class="es_glyph_currency_dollar es_glyph_large"></i>
+    <i class="es_glyph_house dg_glyph" title="house | uniE02F"></i>
     
-    <i class="es_glyph_desktop es_glyph_large"></i>
+    <i class="es_glyph_help dg_glyph" title="help | uniE02E"></i>
     
-    <i class="es_glyph_dots_three_rectangular es_glyph_large"></i>
+    <i class="es_glyph_globe dg_glyph" title="globe | uniE02D"></i>
     
-    <i class="es_glyph_dots_three_vertical es_glyph_large"></i>
+    <i class="es_glyph_gift dg_glyph" title="gift | uniE02C"></i>
     
-    <i class="es_glyph_envelope_simple es_glyph_large"></i>
+    <i class="es_glyph_funnel_simple dg_glyph" title="funnel_simple | uniE02B"></i>
     
-    <i class="es_glyph_envelope_simple_open es_glyph_large"></i>
+    <i class="es_glyph_funnel dg_glyph" title="funnel | uniE02A"></i>
     
-    <i class="es_glyph_eye es_glyph_large"></i>
+    <i class="es_glyph_flag dg_glyph" title="flag | uniE029"></i>
     
-    <i class="es_glyph_eye_closed es_glyph_large"></i>
+    <i class="es_glyph_favorite dg_glyph" title="favorite | uniE028"></i>
     
-    <i class="es_glyph_favorite_fill es_glyph_large"></i>
+    <i class="es_glyph_favorite_fill dg_glyph" title="favorite_fill | uniE027"></i>
     
-    <i class="es_glyph_favorite es_glyph_large"></i>
+    <i class="es_glyph_eye_closed dg_glyph" title="eye_closed | uniE026"></i>
     
-    <i class="es_glyph_flag es_glyph_large"></i>
+    <i class="es_glyph_eye dg_glyph" title="eye | uniE025"></i>
     
-    <i class="es_glyph_funnel es_glyph_large"></i>
+    <i class="es_glyph_envelope_simple_open dg_glyph" title="envelope_simple_open | uniE024"></i>
     
-    <i class="es_glyph_funnel_simple es_glyph_large"></i>
+    <i class="es_glyph_envelope_simple dg_glyph" title="envelope_simple | uniE023"></i>
     
-    <i class="es_glyph_gift es_glyph_large"></i>
+    <i class="es_glyph_dots_three_vertical dg_glyph" title="dots_three_vertical | uniE022"></i>
     
-    <i class="es_glyph_globe es_glyph_large"></i>
+    <i class="es_glyph_dots_three_rectangular dg_glyph" title="dots_three_rectangular | uniE021"></i>
     
-    <i class="es_glyph_help es_glyph_large"></i>
+    <i class="es_glyph_desktop dg_glyph" title="desktop | uniE020"></i>
     
-    <i class="es_glyph_house es_glyph_large"></i>
+    <i class="es_glyph_currency_dollar dg_glyph" title="currency_dollar | uniE01F"></i>
     
-    <i class="es_glyph_info es_glyph_large"></i>
+    <i class="es_glyph_currency_circle_dollar dg_glyph" title="currency_circle_dollar | uniE01E"></i>
     
-    <i class="es_glyph_link es_glyph_large"></i>
+    <i class="es_glyph_copy_simple dg_glyph" title="copy_simple | uniE01D"></i>
     
-    <i class="es_glyph_lis es_glyph_large"></i>
+    <i class="es_glyph_coin_vertical dg_glyph" title="coin_vertical | uniE01C"></i>
     
-    <i class="es_glyph_list_bullets es_glyph_large"></i>
+    <i class="es_glyph_coins dg_glyph" title="coins | uniE01B"></i>
     
-    <i class="es_glyph_list_checks es_glyph_large"></i>
+    <i class="es_glyph_coin dg_glyph" title="coin | uniE01A"></i>
     
-    <i class="es_glyph_lock es_glyph_large"></i>
+    <i class="es_glyph_close dg_glyph" title="close | uniE019"></i>
     
-    <i class="es_glyph_lock_open es_glyph_large"></i>
+    <i class="es_glyph_clock_counter_clockwise dg_glyph" title="clock_counter_clockwise | uniE018"></i>
     
-    <i class="es_glyph_magnifying_glass es_glyph_large"></i>
+    <i class="es_glyph_clock_clockwise dg_glyph" title="clock_clockwise | uniE017"></i>
     
-    <i class="es_glyph_pencil_simple_line es_glyph_large"></i>
+    <i class="es_glyph_clock dg_glyph" title="clock | uniE016"></i>
     
-    <i class="es_glyph_percent es_glyph_large"></i>
+    <i class="es_glyph_check_square_empty dg_glyph" title="check_square_empty | uniE015"></i>
     
-    <i class="es_glyph_printer es_glyph_large"></i>
+    <i class="es_glyph_check_square dg_glyph" title="check_square | uniE014"></i>
     
-    <i class="es_glyph_promotions es_glyph_large"></i>
+    <i class="es_glyph_checks dg_glyph" title="checks | uniE013"></i>
     
-    <i class="es_glyph_push_pin es_glyph_large"></i>
+    <i class="es_glyph_check_circle dg_glyph" title="check_circle | uniE012"></i>
     
-    <i class="es_glyph_push_pin_slash es_glyph_large"></i>
+    <i class="es_glyph_check dg_glyph" title="check | uniE011"></i>
     
-    <i class="es_glyph_rows es_glyph_large"></i>
+    <i class="es_glyph_chart_bar dg_glyph" title="chart_bar | uniE010"></i>
     
-    <i class="es_glyph_settings es_glyph_large"></i>
+    <i class="es_glyph_caret_up dg_glyph" title="caret_up | uniE00F"></i>
     
-    <i class="es_glyph_share_network es_glyph_large"></i>
+    <i class="es_glyph_caret_right dg_glyph" title="caret_right | uniE00E"></i>
     
-    <i class="es_glyph_shield_check es_glyph_large"></i>
+    <i class="es_glyph_caret_left dg_glyph" title="caret_left | uniE00D"></i>
     
-    <i class="es_glyph_sign_in es_glyph_large"></i>
+    <i class="es_glyph_caret_down dg_glyph" title="caret_down | uniE00C"></i>
     
-    <i class="es_glyph_sign_out es_glyph_large"></i>
+    <i class="es_glyph_caret_double_up dg_glyph" title="caret_double_up | uniE00B"></i>
     
-    <i class="es_glyph_slide_left es_glyph_large"></i>
+    <i class="es_glyph_caret_double_down dg_glyph" title="caret_double_down | uniE00A"></i>
     
-    <i class="es_glyph_slide_right es_glyph_large"></i>
+    <i class="es_glyph_calendar_blank dg_glyph" title="calendar_blank | uniE009"></i>
     
-    <i class="es_glyph_sliders es_glyph_large"></i>
+    <i class="es_glyph_calendar dg_glyph" title="calendar | uniE008"></i>
     
-    <i class="es_glyph_sliders_horizontal es_glyph_large"></i>
+    <i class="es_glyph_calculator dg_glyph" title="calculator | uniE007"></i>
     
-    <i class="es_glyph_squares_four es_glyph_large"></i>
+    <i class="es_glyph_betslip dg_glyph" title="betslip | uniE006"></i>
     
-    <i class="es_glyph_timer es_glyph_large"></i>
+    <i class="es_glyph_bell dg_glyph" title="bell | uniE005"></i>
     
-    <i class="es_glyph_trash es_glyph_large"></i>
+    <i class="es_glyph_bell_active dg_glyph" title="bell_active | uniE004"></i>
     
-    <i class="es_glyph_user es_glyph_large"></i>
+    <i class="es_glyph_arrow_square_out dg_glyph" title="arrow_square_out | uniE003"></i>
     
-    <i class="es_glyph_user_list es_glyph_large"></i>
+    <i class="es_glyph_arrow_square_in dg_glyph" title="arrow_square_in | uniE002"></i>
     
-    <i class="es_glyph_warning es_glyph_large"></i>
+    <i class="es_glyph_arrows dg_glyph" title="arrows | uniE001"></i>
     
-    <i class="es_glyph_warning_circle es_glyph_large"></i>
+    <i class="es_glyph_all_games dg_glyph" title="all_games | uniE000"></i>
     
-      </body>
+    </div>
+  </body>
 </html>
-    
