@@ -1,3 +1,4 @@
-dist
+dist/
 
 .vscode/settings.json
+dist/index.html
