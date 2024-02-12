@@ -146,14 +146,20 @@ for idx, files in enumerate(filesArray):
     # uv = "uniE006"
     hexToInt = int(starting_hex_code, 16) + idx
     intToHex = hex(hexToInt)[2:].upper()
-    # print(hexToInt, intToHex)
-    glyph = font.createMappedChar("uni" + intToHex)
-    # glyph.width = 1024 
-    # glyph.vwidth = 1024 
+    glyph_code = "uni" + hex(hexToInt)[2:].upper()
+    # glyph = font.createMappedChar("uni" + intToHex)
+    # glyph.importOutlines(os.path.join(src_icons_path, files))
+
+    if glyph_code in font:
+      print(f"Replacing glyph for {glyph_code}")
+      glyph = font[glyph_code]
+      glyph.clear()  # Clear existing outlines
+    else:
+      print(f"Creating new glyph for {glyph_code}")
+      glyph = font.createChar(hexToInt, glyph_code)
+
+
     glyph.importOutlines(os.path.join(src_icons_path, files))
-
-
-
     scale_x = 0.5  # 50% scaling on the x-axis
     scale_y = 0.5  # 50% scaling on the y-axis
 
@@ -233,11 +239,3 @@ css_file_path = "dist/styles.css"
 with open(css_file_path, "w") as css_file:
     css_file.write(css_content)
 
-
-if __name__ == "__main__":
-    if len(sys.argv) < 4:
-        print("Usage: ffpython use_fontforge.py input_file output_file start_hex")
-        sys.exit(1)
-
-    start_hex = sys.argv[1]
-    modify_font(input_file, output_file, start_hex)
