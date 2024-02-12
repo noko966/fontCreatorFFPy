@@ -1,7 +1,14 @@
 import fontforge
 import os
-import re
+import sys
 import random
+
+# Ensure there's an argument provided
+if len(sys.argv) < 2:
+    print("Usage: script.py <starting_hex_code>")
+    sys.exit(1)
+
+starting_hex_code = sys.argv[1]  # Get the starting hex code from the command line
 
 # Config for Paths and Names
 source_folder = "src"
@@ -137,7 +144,7 @@ def process_string(s):
 
 for idx, files in enumerate(filesArray):
     # uv = "uniE006"
-    hexToInt = int("E197", 16) + idx
+    hexToInt = int(starting_hex_code, 16) + idx
     intToHex = hex(hexToInt)[2:].upper()
     # print(hexToInt, intToHex)
     glyph = font.createMappedChar("uni" + intToHex)
@@ -225,3 +232,12 @@ with open(html_file_path, "w") as html_file:
 css_file_path = "dist/styles.css"
 with open(css_file_path, "w") as css_file:
     css_file.write(css_content)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 4:
+        print("Usage: ffpython use_fontforge.py input_file output_file start_hex")
+        sys.exit(1)
+
+    start_hex = sys.argv[1]
+    modify_font(input_file, output_file, start_hex)

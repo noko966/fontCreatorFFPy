@@ -61,23 +61,7 @@
   direction: ltr !important;
 }
 
-    .dg_icon_bet__builder::before {
-        content: "\E197";
-    }
-    
-    .dg_icon_cash__out_v2::before {
-        content: "\E198";
-    }
-    
-    .dg_icon_double__dooble::before {
-        content: "\E199";
-    }
-    
-    .dg_icon_edit__bet::before {
-        content: "\E19A";
-    }
-    
-    .dg_icon_my__bets::before {
-        content: "\E19B";
+    .dg_icon_arm::before {
+        content: "\E19D";
     }
     
