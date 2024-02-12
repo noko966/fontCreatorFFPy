@@ -1,6 +1,7 @@
 import fontforge
 import os
 import re
+import random
 
 # Config for Paths and Names
 source_folder = "src"
@@ -9,25 +10,25 @@ source_blank_font = "source_empty_font.ttf"
 
 src_icons_path = os.path.join(source_folder, icons_folder)
 font = fontforge.open(os.path.join(source_folder, source_blank_font))
-css_class_prefix = "es_glyph_"
-font_file_name = "eSportsIcons"
+css_class_prefix = "dg_icon_"
+font_file_name = "sportIcons"
 font_family_name = "{}Font".format(font_file_name)
 css_class_additional = "es_glyph_large"
-ico_preview_size = "16"
+ico_preview_size = "24"
 files = os.listdir(src_icons_path)
 
 filesArray = []
 
-html_content = """
+html_content = f"""
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?{random.randint(0, 100)}" />
     <style>
-  .icons_container {
+  .icons_container {{
           display: flex;
           flex-direction: row;
           justify-content: center;
@@ -37,12 +38,12 @@ html_content = """
           padding-right: calc(var(--icoSize) * 0.5);
           background: var(--bodyBg);
           border: 1px solid var(--151A1E);
-      }
+      }}
 
-  html {
+  html {{
   background: var(--bodyBg);
   color: var(--bodyTxt);
-}
+}}
   </style>
   </head>
   <body>
@@ -54,11 +55,11 @@ html_content = """
 css_content = f"""
 @font-face {{
   font-family: "{font_family_name}";
-  src: url("esportIcons.eot");
-  src: url("esportIcons.eot?#iefix") format("embedded-opentype"),
-    url("esportIcons.woff2") format("woff2"),
-    url("esportIcons.woff") format("woff"),
-    url("esportIcons.ttf") format("truetype");
+  src: url("sportIcons.eot");
+  src: url("sportIcons.eot?#iefix") format("embedded-opentype"),
+    url("sportIcons.woff2") format("woff2"),
+    url("sportIcons.woff") format("woff"),
+    url("sportIcons.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -96,10 +97,10 @@ css_content = f"""
   font-family: "{font_family_name}";
   display: inline-block;
   flex-shrink: 0;
-  width: var(--icoSize);
-  height: var(--icoSize);
-  line-height: var(--icoSize);
-  font-size: var(--icoSize);
+      width: 24px;
+    height: 24px;
+    line-height: 23px;
+    font-size: 35px;
   text-align: center;
   vertical-align: middle;
   font-weight: normal;
@@ -135,13 +136,53 @@ def process_string(s):
     return result
 
 for idx, files in enumerate(filesArray):
-    uv = "uniE006"
-    hexToInt = int("E000", 16) + idx
+    # uv = "uniE006"
+    hexToInt = int("E197", 16) + idx
     intToHex = hex(hexToInt)[2:].upper()
     # print(hexToInt, intToHex)
     glyph = font.createMappedChar("uni" + intToHex)
+    # glyph.width = 1024 
+    # glyph.vwidth = 1024 
     glyph.importOutlines(os.path.join(src_icons_path, files))
 
+
+
+    scale_x = 0.5  # 50% scaling on the x-axis
+    scale_y = 0.5  # 50% scaling on the y-axis
+
+    # Create a transformation matrix for scaling
+    scale_matrix = (scale_x, 0, 0, scale_y, 0, 0)
+
+    # Apply the transformation to the glyph
+    glyph.transform(scale_matrix)
+  
+    bbox = glyph.boundingBox()
+
+    # Calculate the dimensions of the glyph
+    glyph_width = bbox[2] - bbox[0]  # xMax - xMin
+    glyph_height = bbox[3] - bbox[1]  # yMax - yMin
+
+    # Target bounding box dimensions
+    target_width = 1024
+    target_height = 1024
+
+    # Calculate the translation needed to center the glyph
+    left_offset = (target_width - glyph_width) / 2
+    top_offset = (target_height - glyph_height) / 2
+
+    translate_x = -bbox[0] + left_offset
+    translate_y = -bbox[1] + top_offset
+    # translate_y = 0
+
+    bbox = glyph.boundingBox()
+
+    
+    # Apply the translation
+    glyph.transform((1, 0, 0, 1, 0, translate_y))
+
+    # Optionally, set the advance width and height of the glyph
+    glyph.width = target_width
+    glyph.vwidth = target_height
 
     print(dir(glyph))
     print(glyph.width)
@@ -153,7 +194,7 @@ for idx, files in enumerate(filesArray):
     result = process_string(result)
 
     html_content += f"""
-    <i class="{css_class_prefix}{result} {css_class_additional}"></i>
+    <i class="{css_class_prefix}{result}"></i>
     """
 
     css_content += f"""
@@ -170,10 +211,10 @@ html_content += """
 
 font.save("dist/output-font.sfd")
 
-font.generate("dist/esportIcons.ttf")
-font.generate("dist/esportIcons.eot")
-font.generate("dist/esportIcons.woff")
-font.generate("dist/esportIcons.woff2")
+font.generate("dist/sportIcons.ttf")
+font.generate("dist/sportIcons.eot")
+font.generate("dist/sportIcons.woff")
+font.generate("dist/sportIcons.woff2")
 
 # Save HTML file
 html_file_path = "dist/index.html"
