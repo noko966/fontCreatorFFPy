@@ -18,7 +18,7 @@ source_blank_font = "source_empty_font.ttf"
 src_icons_path = os.path.join(source_folder, icons_folder)
 font = fontforge.open(os.path.join(source_folder, source_blank_font))
 css_class_prefix = "dg_icon_"
-font_file_name = "sportIcons"
+font_file_name = "sportsIcons"
 font_family_name = "{}Font".format(font_file_name)
 css_class_additional = "es_glyph_large"
 ico_preview_size = "24"
@@ -222,20 +222,20 @@ html_content += """
 </html>
     """
 
-font.save("dist/output-font.sfd")
+font.save("dist/iconFont/output-font.sfd")
 
-font.generate("dist/sportIcons.ttf")
-font.generate("dist/sportIcons.eot")
-font.generate("dist/sportIcons.woff")
-font.generate("dist/sportIcons.woff2")
+font.generate("dist/iconFont/sportIcons.ttf")
+font.generate("dist/iconFont/sportIcons.eot")
+font.generate("dist/iconFont/sportIcons.woff")
+font.generate("dist/iconFont/sportIcons.woff2")
 
 # Save HTML file
-html_file_path = "dist/index.html"
+html_file_path = "dist/iconFont/index.html"
 with open(html_file_path, "w") as html_file:
     html_file.write(html_content)
 
 # Save CSS file
-css_file_path = "dist/styles.css"
+css_file_path = "dist/iconFont/styles.css"
 with open(css_file_path, "w") as css_file:
     css_file.write(css_content)
 
