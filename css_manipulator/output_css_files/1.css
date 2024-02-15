@@ -1,0 +1,38 @@
+:root {
+    --bodyG: #1B112C;
+    --accentBg: #6FB0FF;
+    --accentG: #6FB0FF
+    }
+:root {
+    --bodyBg: #000;
+    --bodyBg2: #000;
+    --bodyBg3: #000;
+    --bodyBghover: #000;
+    --bodyBg2hover: #000;
+    --bodyBg3hover: #000;
+    --bodyTxt: #000;
+    --bodyTxt2: #000;
+    --bodyTxt3: #000;
+    --bodyAccent: #000;
+    --bodyAccenttxt: #000;
+    --bodyRGBA: #000;
+    --bodyRGBA2: #000;
+    --bodyRGBA3: #000;
+    --bodyRadius: #000;
+    --bodyBorder: #000;
+    --accentBg2: #000;
+    --accentBg3: #000;
+    --accentBghover: #000;
+    --accentBg2hover: #000;
+    --accentBg3hover: #000;
+    --accentTxt: #000;
+    --accentTxt2: #000;
+    --accentTxt3: #000;
+    --accentAccent: #000;
+    --accentAccenttxt: #000;
+    --accentRGBA: #000;
+    --accentRGBA2: #000;
+    --accentRGBA3: #000;
+    --accentRadius: #000;
+    --accentBorder: #000
+    }

@@ -1,0 +1,36 @@
+:root, :root[data-theme], :root[data-theme=dark], :root[data-theme=light], :host {
+    --bodyg: #1B112C;
+    --bodybg: #1B112C;
+    --bodybg2: #321f51;
+    --bodybg3: #3d2663;
+    --bodybghover: #221537;
+    --bodybg2hover: #39235c;
+    --bodybg3hover: #442a6e;
+    --bodytxt: #e8e7ea;
+    --bodytxt2: #bbb8c0;
+    --bodytxt3: #8d8896;
+    --bodyaccent: #6FB0FF;
+    --bodyaccenttxt: rgba(0, 0, 0, 0.9);
+    --bodyrgba: rgba(27, 17, 44, 0.7);
+    --bodyrgba2: rgba(27, 17, 44, 0.5);
+    --bodyrgba3: rgba(27, 17, 44, 0.3);
+    --bodyradius: 2px;
+    --bodyborder: #1B112C;
+    --accentBg: #6FB0FF;
+    --accentBg2: #a2ccff;
+    --accentBg3: #bbdaff;
+    --accentBghover: #7eb8ff;
+    --accentBg2hover: #b1d4ff;
+    --accentBg3hover: #cae2ff;
+    --accenttxt: #0b121a;
+    --accenttxt2: #21354d;
+    --accenttxt3: #385880;
+    --accentaccent: #6FB0FF;
+    --accentaccenttxt: rgba(0, 0, 0, 0.9);
+    --accentrgba: rgba(111, 176, 255, 0.7);
+    --accentrgba2: rgba(111, 176, 255, 0.5);
+    --accentrgba3: rgba(111, 176, 255, 0.3);
+    --accentradius: 0;
+    --accentborder: #1B112C;
+    --accentg: #6FB0FF
+    }

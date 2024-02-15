@@ -1,0 +1,39 @@
+
+:root, :root[data-theme], :root[data-theme=dark], :root[data-theme=light], :host {
+    --bodyG: #1B112C;
+    --bodyBg: #1B112C;
+    --bodyBg2: #321f51;
+    --bodyBg3: #3d2663;
+    --bodyBgHover: #221537;
+    --bodyBg2Hover: #39235c;
+    --bodyBg3Hover: #442a6e;
+    --bodyTxt: #e8e7ea;
+    --bodyTxt2: #bbb8c0;
+    --bodyTxt3: #8d8896;
+    --bodyAccent: #6FB0FF;
+    --bodyAccentTxt: rgba(0, 0, 0, 0.9);
+    --bodyRGBA: rgba(27, 17, 44, 0.7);
+    --bodyRGBA2: rgba(27, 17, 44, 0.5);
+    --bodyRGBA3: rgba(27, 17, 44, 0.3);
+    --bodyRadius: 2px;
+    --bodyBorder: #1B112C;
+
+    --accentG: #6FB0FF;
+    --accentBg: #6FB0FF;
+    --accentBg2: #a2ccff;
+    --accentBg3: #bbdaff;
+    --accentBgHover: #7eb8ff;
+    --accentBg2Hover: #b1d4ff;
+    --accentBg3Hover: #cae2ff;
+    --accentTxt: #0b121a;
+    --accentTxt2: #21354d;
+    --accentTxt3: #385880;
+    --accentAccent: #6FB0FF;
+    --accentAccentTxt: rgba(0, 0, 0, 0.9);
+    --accentRGBA: rgba(111, 176, 255, 0.7);
+    --accentRGBA2: rgba(111, 176, 255, 0.5);
+    --accentRGBA3: rgba(111, 176, 255, 0.3);
+    --accentRadius: 0px;
+    --accentBorder: #1B112C;
+
+}
