@@ -2,6 +2,7 @@ import os
 import glob
 import cssutils
 import logging
+from colour import Color
 
 cssutils.log.setLevel(logging.ERROR)
 
@@ -49,9 +50,18 @@ def add_missing_variables_to_css(css_file_path, essences, keys, output_dir):
             # Check if this variable is already defined in the sheet
             # if not any(rule.style.getPropertyValue(var_name) for rule in sheet if rule.type == cssutils.css.CSSRule.STYLE_RULE):
                 # Add the variable with a placeholder value if it's missing
+            bg = "#000"
             for rule in sheet:
-                root_rule.style.setProperty(var_name, "#000")
-                variables_added = True
+                print(var_name)
+                
+                if(rule.style.getPropertyValue(var_name)):
+                    bg = rule.style.getPropertyValue(var_name)
+                    root_rule.style.setProperty(var_name, rule.style.getPropertyValue(var_name))
+                else:
+                    print(Color(bg).lighten(0.2))
+                    root_rule.style.setProperty(var_name, "#000")
+            
+            variables_added = True
 
     # If any variables were added, append the new :root rule to the sheet
     if variables_added:

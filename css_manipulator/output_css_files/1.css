@@ -4,6 +4,7 @@
     --accentG: #6FB0FF
     }
 :root {
+    --bodyG: #1B112C;
     --bodyBg: #000;
     --bodyBg2: #000;
     --bodyBg3: #000;
@@ -20,6 +21,8 @@
     --bodyRGBA3: #000;
     --bodyRadius: #000;
     --bodyBorder: #000;
+    --accentG: #6FB0FF;
+    --accentBg: #6FB0FF;
     --accentBg2: #000;
     --accentBg3: #000;
     --accentBghover: #000;
